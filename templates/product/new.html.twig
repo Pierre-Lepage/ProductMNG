@@ -1,3 +1,4 @@
+{# templates/product/new.html.twig #}
 {% extends 'base.html.twig' %}
 
 {% block title %}Add New Product{% endblock %}
@@ -24,6 +25,13 @@
     }
     input[type="text"],
     input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    input[type="file"] {
         width: 100%;
         padding: 8px;
         margin-bottom: 10px;
@@ -64,8 +72,9 @@
 
 {{ form_start(form) }}
 {{ form_row(form.designation, {'label': 'Designation:'}) }}
-{{ form_row(form.univers, {'label': 'Univers:'}) }}
+{{ form_row(form.univers, {'label': 'Universe:'}) }}
 {{ form_row(form.price, {'label': 'Price:'}) }}
+{{ form_row(form.imageFile, {'label': 'Product Image:'}) }}
 <button type="submit">Add Product</button>
 {{ form_end(form) }}
 {% endblock %}
