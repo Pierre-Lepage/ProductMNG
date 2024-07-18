@@ -4,5 +4,11 @@
         "designation": "test1",
         "univers": "test1",
         "price": 1232
+    },
+    {
+        "id": 2,
+        "designation": "test2",
+        "univers": "Test2",
+        "price": 10000
     }
 ]

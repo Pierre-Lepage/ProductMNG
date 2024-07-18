@@ -14,3 +14,6 @@ cc3385,::1,GET,http://localhost:8000/product/new,1721292973,7e7a54,500,request
 c8fe19,::1,GET,http://localhost:8000/product/new,1721293374,,200,request
 61c3da,::1,POST,http://localhost:8000/product/new,1721293438,,302,request
 511aa2,::1,GET,http://localhost:8000/product/new,1721293438,,200,request
+df6527,::1,GET,http://localhost:8000/product/new,1721294629,,200,request
+a26601,::1,POST,http://localhost:8000/product/new,1721294643,,302,request
+e57d3d,::1,GET,http://localhost:8000/product/new,1721294643,,200,request
