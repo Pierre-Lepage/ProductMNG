@@ -28,11 +28,21 @@ class ProductController extends AbstractController
 
             $this->addFlash('success', 'Product added successfully!');
 
-            return $this->redirectToRoute('product_new');
+            return $this->redirectToRoute('product_list');
         }
 
         return $this->render('product/new.html.twig', [
             'form' => $form->createView(),
+        ]);
+    }
+
+    #[Route('/product', name: 'product_list', methods: ['GET'])]
+    public function list(EntityManagerInterface $entityManager): Response
+    {
+        $products = $entityManager->getRepository(Product::class)->findAll();
+
+        return $this->render('product/list.html.twig', [
+            'products' => $products,
         ]);
     }
 }

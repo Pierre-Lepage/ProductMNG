@@ -426,7 +426,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.q2zxGZ5"/>
+      <argument type="service" id=".service_locator.yXxphaw"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3350,7 +3350,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.q2zxGZ5"/>
+      <argument type="service" id=".service_locator.yXxphaw"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -7955,7 +7955,19 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.4ODNbXW" method="withContext"/>
     </service>
-    <service id=".service_locator.q2zxGZ5" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.P.blNFL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.P.blNFL.App\Controller\ProductController::list()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProductController::list()"/>
+      <argument>App\Controller\ProductController::list()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.P.blNFL" method="withContext"/>
+    </service>
+    <service id=".service_locator.yXxphaw" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
@@ -7963,9 +7975,11 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="App\Controller\ProductController::new" type="service_closure" id=".service_locator.4ODNbXW.App\Controller\ProductController::new()"/>
+        <argument key="App\Controller\ProductController::list" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ProductController::list()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.4wc4Ag1.kernel::loadRoutes()"/>
         <argument key="App\Controller\ProductController:new" type="service_closure" id=".service_locator.4ODNbXW.App\Controller\ProductController::new()"/>
+        <argument key="App\Controller\ProductController:list" type="service_closure" id=".service_locator.P.blNFL.App\Controller\ProductController::list()"/>
       </argument>
     </service>
     <service id=".service_locator.ea.H0ae" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -10083,7 +10097,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.pRu6x_4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.q2zxGZ5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yXxphaw"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10128,6 +10142,7 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.diNoEIK" alias=".service_locator.4wc4Ag1"/>
     <service id=".service_locator.Wg6yaQO" alias=".service_locator.4ODNbXW"/>
+    <service id=".service_locator.4KsIGyf" alias=".service_locator.P.blNFL"/>
     <service id=".service_locator.P367klQ" alias=".service_locator.vZCFFgo"/>
   </services>
 </container>
