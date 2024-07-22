@@ -82,5 +82,17 @@
         "designation": "baaaa",
         "univers": "test",
         "price": 23
+    },
+    {
+        "id": 15,
+        "designation": "test6",
+        "univers": "test3",
+        "price": 1
+    },
+    {
+        "id": 16,
+        "designation": "baaaa",
+        "univers": "bib",
+        "price": 2
     }
 ]

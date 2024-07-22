@@ -73,6 +73,7 @@ ProductMNG/
 ├── .gitignore
 ├── composer.json
 ├── composer.lock
+├── Exercices&Définitions_SOLID_STUPID_DesignPattern
 └── README.md
 ```
 

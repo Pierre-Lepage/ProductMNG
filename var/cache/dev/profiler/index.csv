@@ -113,3 +113,14 @@ fb284d,::1,GET,http://localhost:8000/product/new,1721395133,,200,request
 bc6586,::1,POST,http://localhost:8000/product/new,1721395966,,302,request
 c196ca,::1,GET,http://localhost:8000/product,1721395966,,200,request
 b5717a,::1,GET,http://localhost:8000/product/new,1721396984,,200,request
+26f034,::1,GET,http://localhost:8000/product/new,1721398870,,200,request
+7f6a12,::1,POST,http://localhost:8000/product/new,1721398884,,302,request
+b5e2d4,::1,GET,http://localhost:8000/product,1721398884,,200,request
+872504,::1,GET,http://localhost:8000/product/new,1721645917,,200,request
+1ab4fe,::1,GET,http://localhost:8000/product/new,1721645933,fdc096,500,request
+fdc096,::1,POST,http://localhost:8000/product/new,1721645933,,500,request
+e55a18,::1,GET,http://localhost:8000/product/new,1721645956,808030,500,request
+808030,::1,POST,http://localhost:8000/product/new,1721645956,,500,request
+d90211,::1,GET,http://localhost:8000/product/new,1721646017,,200,request
+e1bb1f,::1,POST,http://localhost:8000/product/new,1721646028,,302,request
+e249db,::1,GET,http://localhost:8000/product,1721646028,,200,request
